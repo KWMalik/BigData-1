@@ -1,0 +1,50 @@
+/* Any demo specific styling needed for this tutorial only */
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+#appLayout {
+    height: 100%;
+}
+#leftCol {
+    width: 14em;
+}
+
+.claro .demoLayout .edgePanel
+{
+    background-color: #d0e9fc;
+}
+
+.claro .demoLayout .topPanel
+{
+    background-color: #ffaaaa;
+}
+
+.claro .demoLayout .leftPanel
+{
+    background-color: #ffffaa;
+}
+
+.claro .demoLayout .centerPanel
+{
+    background-color: #aaffaa;
+}
+
+.claro .demoLayout .rightPanel
+{
+    background-color: #aaffff;
+}
+
+.claro .demoLayout .bottomPanel
+{
+    background-color: #aaaaff;
+}
+
+
+#viewsChart {
+	width: 550px;
+	height: 550px;
+}

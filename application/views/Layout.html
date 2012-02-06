@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Demo: Layout with Dijit</title>
+       
+		<link rel="stylesheet" href="./styles/demo.css" media="screen">
+		<link rel="stylesheet" href="./styles/style.css" media="screen">
+		<link rel="stylesheet" href="../../Dojo/public/dojo-release-1.7.1/dijit/themes/claro/claro.css" media="screen">
+		<link rel="stylesheet" href="../../Dojo/public/dojo-release-1.7.1/dojox/layout/resources/FloatingPane.css" media="screen">
+		<link rel="stylesheet" href="../../Dojo/public/dojo-release-1.7.1/dojox/layout/resources/ResizeHandle.css" media="screen">
+		<link rel="stylesheet" href="../../Dojo/public/dojo-release-1.7.1/dojox/form/resources/UploaderFileList.css">
+
+        <script src="../../Dojo/public/dojo-release-1.7.1/dojo/dojo.js" data-dojo-config="parseOnLoad: true"></script>
+        
+        <script>
+		    dojo.require("dojo.parser");
+		    dojo.require("dijit.layout.BorderContainer");
+		    dojo.require("dijit.layout.TabContainer");
+		    dojo.require("dijit.layout.AccordionContainer");
+		    dojo.require("dijit.layout.ContentPane");
+		    dojo.require("dijit.form.Button");
+		    dojo.require("dojox.form.Uploader");
+		    dojo.require("dojox.form.uploader.FileList");
+		    dojo.require("dojox.form.uploader.plugins.HTML5");
+		</script>
+    </head>
+	<body class="claro">
+	    <div class="demoLayout" data-dojo-type="dijit.layout.BorderContainer" style="height:100%;">
+			
+			<!-- this is the header	-->
+	        <div id="Header" class="topPanel" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'top', splitter:true">
+	        	Performance Based Routing Simulator
+		    </div>
+	       
+        	<div data-dojo-type="dijit.layout.AccordionContainer" data-dojo-props="region:'left', splitter:true" style="width:25%;">
+		        <div class="leftPanel" data-dojo-type="dijit.layout.ContentPane" title="Pane 1">
+		        </div>
+		        <div class="leftPanel" data-dojo-type="dijit.layout.ContentPane" title="Pane 2">
+		        </div>
+ 			</div>
+	       
+	        <div style="width:1px;" class="demoLayout" data-dojo-type="dijit.layout.TabContainer" data-dojo-props="region:'center', tabPosition:'top', splitter:true">
+		        <div class="centerPanel" data-dojo-type="dijit.layout.ContentPane" title="Make a Movie">
+
+					<form method="post" action="UploadFile.php" id="myForm" enctype="multipart/form-data" >
+					    <fieldset>
+					        <legend>Agent Performance Spreadsheet</legend>
+					        <input type="file" id="uploader" name="uploadedfile" multiple="true" dojoType="dojox.form.Uploader" label="Select Some Files" >
+							<input type="button" id="remBtn" label="Clear" data-dojo-type="dijit.form.Button" />
+					        <input type="submit" label="Submit" dojoType="dijit.form.Button" />
+					    </fieldset>
+					</form>
+			        <div id="files" dojoType="dojox.form.Uploader.FileList" uploaderId="uploader">
+			        </div>
+
+		        </div>
+		        
+		        <div class="centerPanel" data-dojo-type="dijit.layout.ContentPane">
+		        </div>
+		    </div>
+		    
+	        <div class="rightPanel" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'right', splitter:true">
+	        </div>
+	       
+	        <div id="Footer" class="bottomPanel" data-dojo-type="dijit.layout.ContentPane" data-dojo-props="region:'bottom', splitter:true">
+	        	Mattersight Corporation Proprietery and Confidential
+	        </div>
+	        
+	    </div>
+	</body>
+</html>
