@@ -16,8 +16,9 @@
 			}		
 			?>
 		</table>
+		<div>The database information took <?php echo round(1000000*$DatabaseInformationTime, 1);?> micro-seconds</div>
 
-		<div>Have <?php echo $TitleCount;?> objects in the Title collection</div>
+		<div>Have <?php echo $TitleCount;?> objects in the Title collection (took <?php echo round(1000000*$CountTime, 1); ?> micro-seconds)</div>
 		<div>Found <?php echo $Cursor->count(true);?></div>
 		<div>The query took <?php echo round(1000000*$QueryTime, 1);?> micro-seconds</div>
 		<table border=1>

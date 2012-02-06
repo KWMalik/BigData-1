@@ -7,9 +7,13 @@ class IndexController
 		$Model = new Model();
 //		$Model->addTitleIndex();
 		
+		$Start = microtime(true);
 		$Databases = $Model->ListDatabases();
+		$DatabaseInformationTime = microtime(true) - $Start;
 		
+		$Start = microtime(true);
 		$TitleCount = $Model->CountTitles();
+		$CountTime = microtime(true) - $Start;
 		
 		$Start = microtime(true);
 		$Cursor = $Model->FindTitles('/hitch.+/i');
