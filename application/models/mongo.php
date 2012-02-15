@@ -60,7 +60,7 @@ class Model
 			$rnd = array_rand($chars);
 			$rtn .= base64_encode(md5($chars[$rnd]));
 		}
-		return substr(str_shuffle(strtolower($rtn)), 0, $max);
+		return substr(str_shuffle(strtolower($rtn)), 0, $Length);
 	}
 	
 	public function ListDatabases()
